@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, intitial-scale=1.0">
+        <title>Jose's Portfolio</title>
+        <link rel="stylesheet" href="style.css" >
+        <script src="website.js"></script>   
+    </head>
+    <body>
+         <div class="hero">
+            <nav>
+                <img src="logo.png" class="logo">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="portfolio.html">PORTFOLIO</a></li>
+                    <li><a href="#">SERVICES</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/List_of_largest_technology_companies_by_revenue">CUSTOMERS</a></li>
+                </ul>
+            </nav>
+            <div class="detel">
+                <h1>Vadoro offers software and database management services for your business.</h1>
+                <p></p>
+                <a href="#">Change Website Color</a>
+               </div>
+            </div>
+            <div class="images">
+                <img src="shape.png" class="shape">
+            </div>
+    <footer id="footerarea">
+        <div id="footerheading">
+            <div id="a">Resources</div> 
+            <div id="b">Contact Us
+                <ul style="list-style: none;">
+                    <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"></a>Support@vadora.com</li>
+                    <li>229-456-7545</li>
+                </ul>
+            </div>
+        </div>
+        <div id="copyright">
+            &copy; Vadaro 2024
+        </div>
+    </footer>
+
+    <script>
+     document.addEventListener("DOMContentLoaded", function() {
+        // Get reference to the button and the hero section
+        const button = document.querySelector(".detel a");
+        const hero = document.querySelector(".hero");
+
+        // Add click event listener to the button
+        button.addEventListener("click", function() {
+            // Prompt the user to enter a color
+            const userColor = prompt("Enter a color (e.g., 'red', '#00ff00', 'rgb(255, 0, 0)'):");
+
+            // Check if user input is not empty
+            if (userColor) {
+                // Change the background color of the hero section
+                hero.style.backgroundColor = userColor;
+            }
+        });
+    });</script>  
+
+    <script>   $(document).ready(function () {
+        // Smooth scrolling
+        $('a[href^="#"]').on('click', function (event) {
+            var target = $(this.getAttribute('href'));
+            if (target.length) {
+                event.preventDefault();
+                $('html, body').stop().animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+            }
+        });
+    });
+        </script>
+</html>

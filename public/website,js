@@ -1,0 +1,45 @@
+$(document).ready(function() {
+    // Smooth scrolling
+    $('a[href^="#"]').on('click', function(e) {
+        e.preventDefault();
+        const targetId = $(this).attr('href').substring(1);
+        const target = $('#' + targetId);
+        if (target.length) {
+            const topOffset = target.offset().top;
+            $('html, body').animate({
+                scrollTop: topOffset
+            }, 1000);
+        }
+    });
+
+    document.addEventListener("DOMContentLoaded", function() {
+        // Get reference to the button and the hero section
+        const button = document.querySelector(".detel a");
+        const hero = document.querySelector(".hero");
+    
+        // Add click event listener to the button
+        button.addEventListener("click", function() {
+            console.log("Button clicked");
+            
+            // Prompt the user to enter a color
+            const userColor = prompt("Enter a color (e.g., 'red', '#00ff00', 'rgb(255, 0, 0)'):");
+            console.log("User entered color:", userColor);
+    
+            // Check if user input is not empty
+            if (userColor) {
+                // Change the background color of the hero section
+                hero.style.backgroundColor = userColor;
+            }
+        });
+    });
+});
+
+
+<div class="detel">
+                <h2> <p>We are a team of experienced engineers and developers that provide custom software services.
+                    Our goal is to enhance our client's business by providing tailored solutions.
+                    We have a collective 170 years of experience developing, deploying, and maintaining bussiness solutions.</p>
+                <br>
+                <p>This is a class project that I hope I am able to build off of and use one day for my own software engineering company.</p>
+             </h2>
+            </div>
